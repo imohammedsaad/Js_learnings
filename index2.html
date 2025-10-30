@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DOM Practice Playground</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      line-height: 1.5;
+    }
+    #display-text, #char-count {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    ul {
+      margin-top: 10px;
+    }
+    li {
+      margin-bottom: 5px;
+    }
+    button {
+      margin-top: 10px;
+      cursor: pointer;
+    }
+    #Bg-clr{
+      height: fit-content;
+      width: fit-content;
+      background-color: dodgerblue;
+    }
+    
+  </style>
+</head>
+<body>
+
+  <h1 id="main-heading">Change my color!</h1>
+
+  <p id="text-paragraph">This is a paragraph.</p>
+
+  <img id="practice-img" src="https://via.placeholder.com/150" alt="Placeholder Image" width="150" />
+  <br/>
+
+  <div>
+    <!-- Button to change background color -->
+  <button id="bg-btn">Change Background Color</button>
+  </div>
+   <br/><br/>
+    <div id="CartQty"></div>
+
+  <br/><br/>
+
+  <!-- Input box + button to display input text -->
+  <input type="text" id="input-text" placeholder="Type something..." />
+  <button id="display-btn">Display Text</button>
+  <p id="display-text"></p>
+
+  <br/>
+
+  <!-- List + button to add list item -->
+  <ul class="item-list">
+    <li>Sample item 1</li>
+  </ul>
+  <input type="text" id="new-item" placeholder="New list item..." />
+  <button id="add-item-btn">Add List Item</button>
+
+  <br/>
+
+  <!-- Button that changes text on hover -->
+  <button id="hover-btn">Hover over me!</button>
+
+  <br/><br/>
+
+  <!-- Image that changes on hover -->
+  <!-- <img id="hover-img" src="https://via.placeholder.com/150" alt="Hover Image" width="150" /> -->
+
+  <br/><br/>
+
+  <!-- Input with character count -->
+  <input type="text" id="char-input" placeholder="Start typing..." />
+  <p>Character Count: <span id="char-count">0</span></p>
+
+  <br/><br/>
+
+  <!-- To-Do List Section -->
+  <h2>To-Do List</h2>
+  <input type="text" id="todo-input" placeholder="Add new task..." />
+  <button id="todo-add-btn">Add Task</button>
+
+  <ul id="todo-list"></ul>
+  <div id="Bg-clr"> COLOR CHANGING DIV</div>
+
+  <script src="./DOM_Manipulation.js"></script>
+  <script src="./Day_1.js"></script>
+  <script src="./Day_2.js"></script>
+  <script src="./EventsHandling.js"></script>
+</body>
+</html>
