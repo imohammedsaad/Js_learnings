@@ -8,47 +8,77 @@
 // console.log("End of Asynchrounous JavaScript Practice File");
 ///------------------------------------------
 //Async callback example
-function fetchData(callback) {
-    setTimeout(() => {
-        const data = "Sample Data";
-        callback(data);
-    }   
-    , 1500);
-}
-console.log("Fetching data...");
-fetchData((data) => {
-    console.log("Data received:", data);
-});
-console.log("End of Async callback example");
-///------------------------------------------
-//CALLBACK HELL EXAMPLE
-function firstTask(callback) {
-    setTimeout(() => {
-        console.log("First task completed");
-        callback();
-    }, 1000);
-}
+// function fetchData(callback) {
+//     setTimeout(() => {
+//         const data = "Sample Data";
+//         callback(data);
+//     }   
+//     , 1500);
+// }
+// console.log("Fetching data...");
+// fetchData((data) => {
+//     console.log("Data received:", data);
+// });
+// console.log("End of Async callback example");
+// ///------------------------------------------
+// //CALLBACK HELL EXAMPLE
+// function firstTask(callback) {
+//     setTimeout(() => {
+//         console.log("First task completed");
+//         callback();
+//     }, 1000);
+// }
 
-function secondTask(callback) {
-    setTimeout(() => {
-        console.log("Second task completed");
-        callback();
-    }, 1000);
-}
-function thirdTask(callback) {
-    setTimeout(() => {
-        console.log("Third task completed");
-        callback();
-    }, 1000);
-}
-console.log("Starting tasks...");
-firstTask(() => {
-    secondTask(() => {
-        thirdTask(() => {
-            console.log("All tasks completed");
-        });
-    });
-});
-console.log("End of CALLBACK HELL EXAMPLE");
+// function secondTask(callback) {
+//     setTimeout(() => {
+//         console.log("Second task completed");
+//         callback();
+//     }, 1000);
+// }
+// function thirdTask(callback) {
+//     setTimeout(() => {
+//         console.log("Third task completed");
+//         callback();
+//     }, 1000);
+// }
+// console.log("Starting tasks...");
+// firstTask(() => {
+//     secondTask(() => {
+//         thirdTask(() => {
+//             console.log("All tasks completed");
+//         });
+//     });
+// });
+// console.log("End of CALLBACK HELL EXAMPLE");
 //------------------------------------------
 //PROMISE EXAMPLE
+const getPromise = () =>{//
+   return new Promise((resolve,reject)=>{//
+        console.log("RRK")
+        // resolve("All Good")
+        reject("Something went wrong")//simulating failure
+    })
+}
+const ps = getPromise()
+ps.then( ()=>{ console.log("getPromise successss")}  )
+ps.catch( ()=>{console.log("Failure return of getPromise")})
+//------------------------------------------
+//promise chaining example  
+function fetchNumber() {
+    return new Promise((resolve,reject) => {
+        setTimeout(() => {
+            resolve(5);
+        }, 5000);
+    });
+}
+fetchNumber().then((num) => {
+    console.log("Fetched number:", num);
+    return num * 2;
+}).then((num) => {
+    console.log("Doubled number:", num);
+    return num + 3;
+}).then((num) => {
+    console.log("Final result after adding 3:", num);
+});
+//------------------------------------------
+
